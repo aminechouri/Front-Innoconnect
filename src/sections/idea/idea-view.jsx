@@ -13,7 +13,8 @@ import StepLabel from '@mui/material/StepLabel';
 import { alpha, useTheme } from '@mui/material/styles';
 import { bgGradient } from 'src/theme/css';
 import Logo from 'src/components/logo';
-
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 export default function IdeaView() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
@@ -96,7 +97,7 @@ export default function IdeaView() {
           sx={{
             p: 5,
             width: 1,
-            maxWidth: 420,
+            maxWidth: "80%",
           }}
         >
           <Typography variant="h4">Idea Submission Form</Typography>
@@ -250,7 +251,21 @@ export default function IdeaView() {
           {businessPlan && (
             <Card>
               <Typography variant="h5">Generated Business Plan:</Typography>
-              <Typography>{businessPlan.businessPlan}</Typography>{' '}
+
+              <Popup trigger={<button className="see-idea"> See Business plan </button>} modal>   
+              <Typography className='plan' p={5}>{businessPlan.businessPlan}</Typography>{' '}
+              <div className="btns">
+              <Button type="submit" className='save' variant="contained">
+                  Save
+                </Button>
+                <Button type="publish" className='publish' variant="contained">
+                  Publish
+                </Button>
+                <Button type="error" className='delete' variant="contained">
+                  Delete
+                </Button>
+              </div>
+              </Popup>
               {/* Access businessPlan inside the object */}
             </Card>
           )}

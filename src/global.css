@@ -81,3 +81,26 @@
   position: absolute;
   right: 15px;
 }
+
+.plan{
+  height: 600px;
+  overflow: auto;
+}
+.btns{
+  text-align: right;
+  margin-bottom:20px ;
+  margin-right: 35px;
+  margin-top: 25px;
+}
+.btns button{
+  margin: 0 7px;
+  font-size: 14px;
+  width: 80px;
+  text-align: center;
+}
+.btns .save{
+  background-color: green;
+}
+.btns .delete{
+  background-color: red;
+}

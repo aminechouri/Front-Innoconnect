@@ -15,7 +15,7 @@ export const About = lazy(() => import('src/pages/landingPage/About'));
 export const Contact = lazy(() => import('src/pages/landingPage/Contact'));
 export const Services = lazy(() => import('src/pages/landingPage/Services'));
 export const IdeaPage = lazy(() => import('src/pages/idea'));
-
+export const ProfilPage = lazy(() => import ('src/pages/profil'));
 // ----------------------------------------------------------------------
 
 export default function Router() {
@@ -33,7 +33,8 @@ export default function Router() {
         { path: 'user', element: <UserPage /> },
         { path: 'ideas', element: <ProductsPage /> },
         { path: 'forum', element: <BlogPage /> },
-        { path: 'idea', element: <IdeaPage /> }
+        { path: 'idea', element: <IdeaPage /> },
+        { path: 'profil', element: <ProfilPage /> }
         
       ],
     },
