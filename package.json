@@ -48,6 +48,7 @@
     "react-hook-form": "^7.47.0",
     "react-router-dom": "^6.16.0",
     "react-throttle": "^0.2.0",
+    "reactjs-popup": "^2.0.6",
     "simplebar-react": "^3.2.4",
     "styled-components": "^6.1.8",
     "sweetalert": "^2.1.2"
